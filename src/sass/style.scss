@@ -1,0 +1,772 @@
+@import 'colors';
+@import 'animation';
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   scroll-padding-top: 82px;
+}
+
+body {
+   position: relative;
+   font-family: 'Montserat',
+      sans-serif;
+   background-color: $bg-color;
+}
+
+h2 {
+   text-align: center;
+   text-transform: uppercase;
+   color: $txt-color;
+}
+
+.underline {
+   margin: 0 auto 40px;
+   width: 160px;
+   height: 4px;
+   background-color: $main-color;
+}
+
+.blue-text {
+   color: $main-color;
+}
+
+.shadow-bg {
+   background-color: rgba(0, 0, 0, .8);
+}
+
+nav,
+.navbar-nav {
+   text-transform: uppercase;
+   // letter-spacing: 2px;
+   transition: background-color .6s;
+   z-index: 1;
+
+   a,
+   i {
+      color: $white;
+
+      text-decoration: none;
+   }
+
+   a:hover {
+      color: $main-color;
+   }
+
+   ul {
+      list-style: none;
+   }
+
+   .fa-bars {
+      padding: 10px;
+   }
+
+   .navbar-brand {
+      font-weight: bold;
+   }
+
+   .active {
+      color: $main-color;
+   }
+
+}
+
+header {
+   color: $white;
+
+   h1 {
+      font-size: 30px;
+      text-transform: uppercase;
+   }
+
+   p {
+      font-size: 14px;
+   }
+
+   .hero-img {
+      position: relative;
+      height: 100vh;
+      background-image: url(../img/header-mini.jpg);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      z-index: 0;
+   }
+
+   .hero-shadow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .5);
+      z-index: -10;
+   }
+
+   .hero-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      padding: 10px;
+      text-align: center;
+      z-index: 5;
+   }
+
+   .btn-outline-light {
+      text-transform: uppercase;
+   }
+
+   .fa-chevron-down {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 20px;
+      font-size: 30px;
+      color: $white;
+   }
+
+   .hero-img-offer {
+      position: relative;
+      height: 30vh;
+      background-image: url(../img/header-mini.jpg);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      z-index: 0;
+   }
+
+   .hero-shadow-offer {
+      position: absolute;
+      width: 100%;
+      height: 30%;
+      background-color: rgba(0, 0, 0, .5);
+      z-index: -10;
+   }
+}
+
+.hide {
+   display: none;
+}
+
+.cookie-box {
+   position: fixed;
+   bottom: 0;
+   padding: 2em;
+   height: 300px;
+   width: 100%;
+   text-align: center;
+   font-size: 2rem;
+   background-color: #081217;
+   opacity: 0;
+   transform: translateY(100%);
+   animation: show-cookies .5s .5s forwards;
+}
+
+.cookie-box::before {
+   position: absolute;
+   top: -280px;
+   right: 50px;
+   width: 400px;
+   height: 400px;
+   background-image: url('https://lezebre.lu/images/detailed/26/65626-JDM-Cookie-Monster.png');
+   background-size: cover;
+   content: '';
+}
+
+.cookie-btn {
+   margin-top: 1em;
+   padding: 0.5em 1em;
+   font-size: 1.6rem;
+   border: 1px solid #232020;
+   border-radius: 7px;
+   color: $white;
+   background-color: #2890D0;
+   transition: background-color .3s;
+   cursor: pointer;
+}
+
+.cookie-btn:hover {
+   background-color: #1d5386;
+}
+
+@keyframes show-cookies {
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+h2 {
+   margin-top: 30px;
+}
+
+.text-offer {
+   color: $txt-color;
+}
+
+.text-offer img {
+   float: left;
+}
+
+.design {
+   background-color: $bg-color;
+}
+
+.text-design {
+   color: $txt-color;
+   // z-index: -10;
+}
+
+.text-design img {
+   float: right;
+}
+
+.bitcoin {
+   position: relative;
+   background-image: url('../img/bitcoin.jpg');
+   background-size: cover;
+   background-attachment: fixed;
+   z-index: 0;
+}
+
+.bitcoin-shadow {
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #f9fbfdcc;
+   z-index: -5;
+}
+
+.aboutus {
+   .underline {
+      background-color: $txt-color;
+   }
+
+   a {
+      color: $span-color;
+      text-decoration: none;
+   }
+
+   i {
+      margin-top: 20px;
+      font-size: 30px;
+   }
+
+   i:hover {
+      color: $p-color;
+   }
+
+   .aboutus-card-title {
+      font-size: 18px;
+      text-transform: uppercase;
+   }
+
+   .aboutus-card-text {
+      font-size: 14px;
+   }
+
+   // .aboutus-hover {
+   //    transition: color .4s;
+   // }
+
+   .aboutus-hover:hover {
+      color: $txt-color;
+   }
+}
+
+.aboutus-hero {
+   position: relative;
+   background-image: url(../img/about-hero-small.jpg);
+   background-position: center;
+   background-size: cover;
+   color: $white;
+   z-index: 0;
+
+   h2 {
+      color: $white;
+   }
+
+   .underline {
+      background-color: $white;
+   }
+
+   .aboutus-shadow {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .7);
+      z-index: -5;
+   }
+
+}
+
+.aboutuas-hero-item {
+   margin: 10px 0;
+
+   i {
+      font-size: 36px;
+   }
+
+   .aboutus-hero-title {
+      font-size: 24px;
+   }
+}
+
+.portfolio {
+   .carousel-item {
+      position: relative;
+      height: 600px;
+   }
+
+   .carousel-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      padding: 40px 0;
+      background-color: rgba(0, 0, 0, .8);
+   }
+
+   .carousel-indicators {
+      padding-bottom: 20px;
+   }
+}
+
+.prices {
+
+   background-color: $bg-color;
+
+   h2 {
+      color: $txt-color;
+   }
+
+   .underline {
+      background-color: $txt-color;
+   }
+
+   .price-box {
+      margin: 20px 10px;
+      padding: 30px;
+      border: .5px #c0c0c0 solid;
+      border-radius: 2%;
+      background-color: $bg-color;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, .4);
+      transition: transform .3s;
+
+      h3 {
+         color: $txt-color;
+         text-transform: uppercase;
+      }
+
+      span {
+         font-weight: bold;
+         color: $txt-color;
+      }
+
+      p {
+         color: $txt-color;
+      }
+
+      i {
+         color: $p-color;
+         padding: 0 .5rem;
+         font-size: 24px;
+      }
+
+      button {
+         padding: 10px 20px;
+      }
+
+      .price-tag {
+         font-weight: bold;
+         font-size: 30px;
+      }
+
+      .price-tag span {
+         color: $p-color;
+      }
+   }
+
+   .price-box:hover {
+      transform: scale(1.05);
+   }
+
+   .price-info {
+      margin-top: 30px;
+
+      a {
+         text-decoration: none;
+      }
+   }
+}
+
+.team {
+   position: relative;
+   background-image: url('../img/team/team-bg.jpg');
+   background-size: cover;
+   background-attachment: fixed;
+   z-index: 0;
+
+   h2 {
+      color: $white;
+   }
+
+   .underline {
+      background-color: $white;
+   }
+
+   .team-shadow {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .6);
+      z-index: -5;
+   }
+
+   .card {
+      transition: transform .4s;
+
+      img {
+         height: 300px;
+         object-fit: cover;
+      }
+
+      i {
+         padding: 10px;
+      }
+   }
+
+   .card:hover {
+      transform: scale(.96);
+   }
+
+   .card-title {
+      margin-bottom: 20px;
+      text-align: center;
+      text-transform: uppercase;
+   }
+}
+
+.card-body {
+   height: 160px;
+}
+
+.achievements {
+   .underline {
+      background-color: $txt-color;
+   }
+
+   i {
+      padding: 10px;
+      font-size: 48px;
+      color: $white;
+      text-shadow: 0 0 5px #000;
+   }
+
+   .achievements-list {
+      padding: 20px 0;
+   }
+
+   .achievement-number {
+      font-size: 22px;
+   }
+
+   .achievement-text {
+      font-size: 13px;
+      text-transform: uppercase;
+   }
+}
+
+.contact {
+   position: relative;
+   background-image: url('../img/contact-hero1920\ .jpg');
+   background-position: center;
+   background-attachment: fixed;
+   background-size: cover;
+   z-index: 0;
+
+   h2 {
+      color: $white;
+      // font-weight: bold;
+   }
+
+   .underline {
+      background-color: $white;
+   }
+
+   .contact-shadow {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 27, 80, 0.8);
+      z-index: -5;
+   }
+
+   .contact-us {
+      display: flex;
+      align-items: center;
+      color: $white;
+
+      .contact-item {
+         margin: 30px 0;
+         color: #ccc;
+
+         a {
+            text-decoration: none;
+            color: antiquewhite;
+         }
+
+         a:hover {
+            color: $p-color;
+         }
+
+         h3 {
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: $white;
+         }
+
+         .social-media {
+            font-size: 26px;
+
+            a {
+               padding: 10px;
+               color: $white;
+            }
+
+            a:hover {
+               color: $main-color;
+            }
+         }
+      }
+   }
+}
+
+//contact form
+.formField {
+   font: inherit;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+   margin: 3px 0 10px 0;
+   padding: 3px 0;
+}
+
+textarea.formField {
+   width: 300px;
+   height: 70px;
+}
+
+#sendBtn {
+   cursor: pointer;
+   background: #ccc;
+   background: linear-gradient(#ddd 0, #eee 100%);
+   border: 1px solid #ccc;
+   line-height: 32px;
+   font-size: 14px;
+   padding: 0 25px;
+   border-radius: 3px;
+}
+
+#send_form_status {
+   border: 1px dashed #ccc;
+   display: none;
+   padding: 0 10px;
+   margin: 10px 0;
+}
+
+.status_ok {
+   color: #0b570b;
+}
+
+.status_err {
+   color: #860707;
+}
+
+.map {
+   padding: 20px;
+}
+
+
+.footer {
+   color: $bg-color;
+}
+
+@media(min-width:375px) {
+   header {
+      h1 {
+         font-size: 36px;
+      }
+
+      p {
+         font-size: 16px;
+      }
+   }
+
+}
+
+@media(max-width: 768px) {
+   .cookie-box {
+      height: 120px;
+      font-size: 0.6em;
+   }
+
+   .cookie-box::before {
+      position: absolute;
+      top: -50px;
+      right: 30px;
+      width: 100px;
+      height: 100px;
+   }
+
+   .cookie-btn {
+      // margin-bottom: 0;
+      font-size: 1.6em;
+   }
+}
+
+@media(min-width:768px) {
+   header {
+      h1 {
+         font-size: 42px;
+      }
+
+      p {
+         font-size: 20px;
+      }
+   }
+}
+
+@media(max-width:992px) {
+   .cookie-box {
+      height: 130px;
+      font-size: 0.6em;
+   }
+
+   .cookie-box::before {
+      position: absolute;
+      // top: -50px;
+      // right: 30px;
+      width: 100px;
+      height: 100px;
+   }
+
+   .cookie-btn {
+      font-size: 1.6em;
+   }
+}
+
+@media (min-width: 992px) {
+   html {
+      scroll-padding-top: 71.95px;
+   }
+
+   .aboutus-hero {
+      background-image: url(../img/about-hero-big.jpg);
+
+   }
+
+   .prices {
+      .price-info {
+         font-size: 18px;
+      }
+   }
+
+   .menu-item {
+      display: inline-block;
+      // height: 80px;
+      // width: 100px;
+      line-height: 40px;
+      transition: background-color .3s;
+   }
+
+   .menu-item:hover {
+      background-color: #363636;
+   }
+
+   .dropdown {
+      position: absolute;
+      width: 250px;
+   }
+
+   .dropdown li {
+      display: none;
+      opacity: 0;
+      background-color: #50515A;
+      transition: color .3s;
+      text-align: center;
+
+      a {
+         text-decoration: none;
+      }
+   }
+
+   .dropdown li:hover {
+      color: royalblue;
+   }
+
+   .menu-item:hover .dropdown li {
+      display: block;
+      animation: menu1 .5s forwards;
+   }
+
+   .menu-item:hover .dropdown li:nth-child(2) {
+      animation-delay: .2s;
+   }
+
+   .menu-item:hover .dropdown li:nth-child(3) {
+      animation-delay: .4s;
+   }
+
+   .menu-item:hover .dropdown li:nth-child(4) {
+      animation-delay: .6s;
+   }
+
+   @keyframes menu1 {
+      from {
+         opacity: 0;
+         transform: rotate(36deg);
+      }
+
+      to {
+         opacity: 1;
+         transform: rotate(0);
+      }
+   }
+}
+
+@media(max-width: 1200px) {
+   .cookie-box {
+      height: 130px;
+      font-size: 0.6em;
+   }
+
+   .cookie-box::before {
+      position: absolute;
+      top: -100px;
+      right: 30px;
+      // width: 200px;
+      // height: 200px;
+   }
+
+   .cookie-btn {
+      font-size: 1.6em;
+   }
+}
+
+@media (min-width: 1200px) {
+   header {
+      .hero-img {
+         background-image: url(../img/header-big.jpg);
+      }
+   }
+}
