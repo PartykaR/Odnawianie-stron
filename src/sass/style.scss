@@ -13,6 +13,30 @@ html {
    scroll-padding-top: 82px;
 }
 
+:root {
+   --scroll-width: 30px;
+}
+
+.scroll-bar {
+   position: absolute;
+   top: 105px;
+   height: 20px;
+   width: var(--scroll-width);
+   background-color: $main-color;
+}
+
+.scroll-to-top {
+   // display: none;
+   position: fixed;
+   bottom: 50px;
+   right: 50px;
+   padding: 1em 2em;
+   text-transform: uppercase;
+   background-color: #1d5386;
+   border: none;
+   cursor: pointer;
+}
+
 body {
    position: relative;
    font-family: 'Montserat',
