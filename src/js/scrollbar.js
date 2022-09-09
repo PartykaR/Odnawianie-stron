@@ -1,0 +1,1 @@
+const goTop = document.querySelector('.scroll-to-top')
