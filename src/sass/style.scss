@@ -40,7 +40,7 @@ html {
    z-index: 100;
 }
 
-.fa-arrow-up {
+.fa-solid .fa-arrow-up {
    display: none;
    position: fixed;
    bottom: 50px;
@@ -50,7 +50,7 @@ html {
    background-color: #1d5386;
    border: none;
    cursor: pointer;
-   z-index: 100;
+   z-index: 105;
 }
 
 .active {
