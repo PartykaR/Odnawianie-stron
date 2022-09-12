@@ -15,26 +15,46 @@ html {
 
 :root {
    --scroll-width: 30px;
+   // z-index: 1000;
 }
 
 .scroll-bar {
-   position: absolute;
+   position: fixed;
    top: 105px;
-   height: 20px;
+   height: 10px;
    width: var(--scroll-width);
    background-color: $main-color;
+   z-index: 100;
 }
 
 .scroll-to-top {
-   // display: none;
+   display: none;
    position: fixed;
    bottom: 50px;
-   right: 50px;
+   right: 2%;
    padding: 1em 2em;
    text-transform: uppercase;
    background-color: #1d5386;
    border: none;
    cursor: pointer;
+   z-index: 100;
+}
+
+.fa-arrow-up {
+   display: none;
+   position: fixed;
+   bottom: 50px;
+   right: 2%;
+   padding: 1em 2em;
+   text-transform: uppercase;
+   background-color: #1d5386;
+   border: none;
+   cursor: pointer;
+   z-index: 100;
+}
+
+.active {
+   display: block;
 }
 
 body {
