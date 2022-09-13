@@ -30,7 +30,7 @@ html {
 .scroll-to-top {
    display: none;
    position: fixed;
-   bottom: 50px;
+   bottom: 2%;
    right: 2%;
    padding: 1em 2em;
    text-transform: uppercase;
@@ -38,19 +38,6 @@ html {
    border: none;
    cursor: pointer;
    z-index: 100;
-}
-
-.fa-solid .fa-arrow-up {
-   display: none;
-   position: fixed;
-   bottom: 50px;
-   right: 2%;
-   padding: 1em 2em;
-   text-transform: uppercase;
-   background-color: #1d5386;
-   border: none;
-   cursor: pointer;
-   z-index: 105;
 }
 
 .active {
