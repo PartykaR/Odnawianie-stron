@@ -10,7 +10,7 @@ const handleScrollBar = () => {
    // console.log(leftToScroll);
 
    const scrollBarWidth = Math.floor((scroll / leftToScroll) * 100)
-   console.log(scrollBarWidth);
+   // console.log(scrollBarWidth);
 
    root.style.setProperty('--scroll-width', `${scrollBarWidth}%`)
 
