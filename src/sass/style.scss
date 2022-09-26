@@ -106,6 +106,10 @@ nav,
       color: $main-color;
    }
 
+   .navbar-toggler:focus {
+      outline: none;
+      // color: $main-color;
+   }
 }
 
 header {
