@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
    const nav = document.querySelector('.navbar')
    const allNavItems = document.querySelectorAll('.nav-link')
    const navList = document.querySelector('.navbar-collapse')
+   const footerYear = document.querySelector('.footer__year')
 
    function addShadow() {
       if (window.scrollY >= 30) {
@@ -37,7 +38,6 @@ const handleCookieBox = () => {
 cookieBtn.addEventListener('click', handleCookieBox)
 showCookie()
 
-const footerYear = document.querySelector('.footer__year')
 
 const handleCurrentYear = () => {
    const year = (new Date).getFullYear();
