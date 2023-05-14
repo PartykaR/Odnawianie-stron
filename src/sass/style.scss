@@ -185,6 +185,24 @@ header {
    }
 }
 
+.active {
+   color: gray;
+}
+
+.breadcrumb-item {
+   font-size: 8px;
+
+   a:hover {
+      text-decoration: underline;
+      color: #081217;
+   }
+
+   a {
+      color: $span-color;
+   }
+
+}
+
 .hide {
    display: none;
 }
